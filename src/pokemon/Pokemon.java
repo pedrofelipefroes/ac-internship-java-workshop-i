@@ -1,25 +1,44 @@
 package pokemon;
 
-import moves.Move;
 import types.Type;
 
-import java.util.Set;
-
-public abstract class Pokemon {
+public class Pokemon {
 	private int level;
 	private Type primaryType;
 	private Type secondaryType;
 
+	public Pokemon(int level, Type primaryType) {
+		this.level = level;
+		this.primaryType = primaryType;
+	}
+
+	public Pokemon(int level, Type primaryType, Type secondaryType) {
+		this.level = level;
+		this.primaryType = primaryType;
+		this.secondaryType = secondaryType;
+	}
+
+	public int getLevel() {
+		return level;
+	}
+
+	public void setLevel(int level) {
+		this.level = level;
+	}
+
 	public Type getPrimaryType() {
-		return this.primaryType;
+		return primaryType;
 	}
 
 	public Type getSecondaryType() {
-		return this.secondaryType;
+		return secondaryType;
 	}
 
 	public String getType() {
-		if (secondaryType == null) return this.getPrimaryType().toString();
-		else return this.getPrimaryType().toString() + "/" + this.secondaryType.toString();
+		if(this.secondaryType == null) {
+			return this.getPrimaryType().toString();
+		} else {
+			return this.getPrimaryType().toString() + "/" + this.getSecondaryType().toString();
+		}
 	}
 }

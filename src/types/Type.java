@@ -4,8 +4,14 @@ import java.util.Set;
 
 public abstract class Type {
 	private String name;
-	private Set<Type> resistances;
-	private Set<Type> weaknesses;
+	private Set<String> resistances;
+	private Set<String> weaknesses;
+
+	public Type (String name, Set<String> resistances, Set<String> weaknesses) {
+		this.name = name;
+		this.resistances = resistances;
+		this.weaknesses = weaknesses;
+	}
 
 	public String getName() {
 		return this.name;
@@ -15,11 +21,15 @@ public abstract class Type {
 		this.name = name;
 	}
 
-	public abstract Set<Type> getResistances();
+	public Set<String> getResistances() {
+		return this.resistances;
+	};
 
 	public abstract void setResistances(Set<Type> resistances);
 
-	public abstract Set<Type> getWeaknesses();
+	public Set<String> getWeaknesses() {
+		return this.weaknesses;
+	};
 
 	public abstract void setWeaknesses(Set<Type> weaknesses);
 

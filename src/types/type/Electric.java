@@ -4,20 +4,15 @@ import types.Type;
 
 import java.util.Set;
 
-public class Grass extends Type {
-	@Override
-	public Set<Type> getResistances() {
-		return null;
+public class Electric extends Type {
+
+	public Electric(String name, Set<String> resistances, Set<String> weaknesses) {
+		super(name, resistances, weaknesses);
 	}
 
 	@Override
 	public void setResistances(Set<Type> resistances) {
 
-	}
-
-	@Override
-	public Set<Type> getWeaknesses() {
-		return null;
 	}
 
 	@Override
