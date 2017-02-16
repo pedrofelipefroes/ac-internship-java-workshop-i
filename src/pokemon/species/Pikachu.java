@@ -2,10 +2,13 @@ package pokemon.species;
 
 import moves.ZMove;
 import pokemon.Pokemon;
+import type.Type;
+import type.types.Electric;
 
 public class Pikachu extends Pokemon implements ZMove {
 	private String name;
 	private int ZMovePower;
+	private Type electric = new Electric();
 
 	public Pikachu(int level) {
 		super(level);
@@ -23,12 +26,15 @@ public class Pikachu extends Pokemon implements ZMove {
 	}
 
 	public void displayInfo() {
-		System.out.println("Specie: Pikachu");
+		System.out.println("Specie:      Pikachu");
 		if(this.name != null) {
-			System.out.println("Name:   " + this.getName());
+			System.out.println("Name:        " + this.getName());
 		}
-		System.out.println("Level:  " + this.getLevel());
-		System.out.println("Type:   " + this.getType());
+		System.out.println("Level:       " + this.getLevel());
+		System.out.println("Type:        " + this.getType());
+		System.out.println("Resistances: " + this.electric.getResistances());
+		System.out.println("Weaknesses:  " + this.electric.getWeaknesses());
+		System.out.println();
 	}
 
 	@Override

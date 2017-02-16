@@ -1,6 +1,5 @@
-import moves.ZMove;
-import pokemon.Pokemon;
-import pokemon.species.Pikachu;
+import pokemon.*;
+import pokemon.species.*;
 
 public class Pokedex {
 	public static void main(String[] args) {
