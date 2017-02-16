@@ -1,11 +1,11 @@
 package pokemon.species;
 
-import moves.ZMove;
+import moves.ZMoveHolder;
 import pokemon.Pokemon;
 import type.Type;
 import type.types.Electric;
 
-public class Pikachu extends Pokemon implements ZMove {
+public class Pikachu extends Pokemon implements ZMoveHolder {
 	private String name;
 	private int ZMovePower;
 	private Type electric = new Electric();
